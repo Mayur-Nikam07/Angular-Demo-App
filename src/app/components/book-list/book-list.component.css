@@ -1,0 +1,99 @@
+/* Background */
+.container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card (Glass effect) */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Year badge */
+.year {
+  background: #ff7a18;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* Body */
+.card-body p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Spinner */
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.error {
+  text-align: center;
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 18px;
+}

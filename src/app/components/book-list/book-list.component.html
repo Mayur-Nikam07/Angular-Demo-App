@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h1 class="title">📚 Book Library</h1>
+
+  <!-- Loading -->
+  <div *ngIf="isLoading" class="loading">
+    <div class="spinner"></div>
+    <p>Loading books...</p>
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="errorMessage" class="error">
+    {{errorMessage}}
+  </div>
+
+  <!-- Book List -->
+  <div class="grid" *ngIf="!isLoading && !errorMessage">
+
+    <div class="card" *ngFor="let b of books">
+      
+      <div class="card-header">
+        <h2>{{b.title}}</h2>
+        <span class="year">{{b.year}}</span>
+      </div>
+
+      <div class="card-body">
+        <p>👤 {{b.author}}</p>
+        <p>📖 {{b.genre}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
